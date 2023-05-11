@@ -37,7 +37,7 @@ canvas{
   border-color: #2CEACB;
   color: #D4FDE7;
 }
-.btn.button.selected{
+.btn.button:hover{
   background-color: #2CEACB;
   color: #085A70;
 }

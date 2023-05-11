@@ -1,170 +1,107 @@
 <!DOCTYPE html>
+
 <head>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"
-  />
-  <style>
-    .card {
-      width: 100%;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+<link href="../Common/layout.css" rel="stylesheet">
 </head>
 <html>
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Home</a>
-      </div>
-    </nav>
-    <div class="d-flex container p-5">
-      <div class="flex-column">
-        <div class="card p-5">
-          <div class="form-check form-switch">
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a href="./robot.html">
+        <span class="navbar-brand h1" href="#">
+          < Robot</span>
+      </a>
+      <a href="../index.html"><span class="navbar-brand mb-0 h1">Pencapit</span></a>
+      <a href=""><span class="navbar-brand h1" href="#"></span></a>
+    </div>
+  </nav>
+  <div class="container-fluid pt-5" id="page1">
+    <div class="d-flex flex-row mb-0 align-middle">
+      <div class="d-flex flex-column mb-5 me-3 shadow-sm" id="btnGrp">
+        <div class="d-flex flex-column px-5 mb-4">
+           <div class="form-check form-switch ">
             <input class="form-check-input" type="checkbox" id="AutoAnimate" checked>
-            <label class="form-check-label" for="AutoAnimate">Auto Animate</label>
+            <label class="form-check-label ms-3" for="AutoAnimate">Auto Animate</label>
           </div>
         </div>
-        <div class="card p-5">
+        <div class="d-flex flex-column px-5">
           <h4>Compound Movement</h4>
-          <label class="form-label">Base</label>
-          <div class="flex-row my-1 base-btns">
-            <button class="action-btn btn btn-primary m-1" id="BaseRotateLeft">Rotate Left</button>
-            <button class="action-btn btn btn-primary m-1" id="BaseRotateRight">Rotate Right</button>
+          <label class="form-label mt-3">Base</label>
+          <div class="d-flex flex-row base-btns mb-3">
+            <button class="btn button action-btn" id="BaseRotateLeft">Rotate Left</button>
+            <button class="btn button ms-2 action-btn" id="BaseRotateRight">Rotate Right</button>
           </div>
           <label class="form-label">Crane</label>
-          <div class="flex-row my-1 crane-btns">
-            <button class="action-btn btn btn-primary m-1" id="CraneLower">Lower Crane</button>
-            <button class="action-btn btn btn-primary m-1" id="CraneRaise">Raise Crane</button>
+          <div class="d-flex flex-row crane-btns mb-3">
+            <button class="btn button action-btn" id="CraneLower">Lower Crane</button>
+            <button class="btn button ms-2 action-btn" id="CraneRaise">Raise Crane</button>
           </div>
           <label class="form-label">Claw</label>
-          <div class="flex-row my-1 claw-btns">
-            <button class="action-btn btn btn-primary m-1" id="ClawGrab">Grab</button>
-            <button class="action-btn btn btn-primary m-1" id="ClawRelease">Release</button>
+          <div class="d-flex flex-row claw-btns mb-3">
+            <button class="btn button action-btn" id="ClawGrab">Grab</button>
+            <button class="btn button ms-2 action-btn" id="ClawRelease">Release</button>
           </div>
         </div>
-        <div class="card p-5">
-          <h4>Individual Movement</h4>
-          <label for="customRange1" class="form-label">Base</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="30"
-            id="BASE"
-          />
-    
-          <label for="customRange1" class="form-label">Arm 1</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="20"
-            id="ARM1"
-          />
-    
-          <label for="customRange1" class="form-label">Arm 2</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="-40"
-            id="ARM2"
-          />
-    
-          <label for="customRange1" class="form-label">Arm 3</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="130"
-            id="ARM3"
-          />
-    
-          <label for="customRange1" class="form-label">Arm 4</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="20"
-            id="ARM4"
-          />
-    
-          <label for="customRange1" class="form-label">Arm 5</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="0"
-            id="ARM5"
-          />
-    
-          <label for="customRange1" class="form-label">Claw 1</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="-10"
-            id="CLAW1"
-          />
-    
-          <label for="customRange1" class="form-label">Claw 2</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="-10"
-            id="CLAW2"
-          />
-    
-          <label for="customRange1" class="form-label">Claw 3</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="10"
-            id="CLAW3"
-          />
-          <label for="customRange1" class="form-label">Claw 4</label>
-          <input
-            min="-180"
-            max="180"
-            step="10"
-            type="range"
-            class="form-range"
-            value="10"
-            id="CLAW4"
-          />
-        </div>
       </div>
-  
-  
+
       <div>
         <canvas id="gl-canvas" width="512" height="512"> </canvas>
       </div>
+      <div class="d-flex flex-column ms-3 mb-5 pt-5 p-3 flex-fill text-center shadow-sm" id="slidercontainer">
+        <h4>Individual Movement</h4>
+        <div class="d-flex flex-row m-3 flex-fill">
+          <div class="d-flex flex-column flex-fill">
+          <label for="customRange1" class="form-label">Arm 1</label>
+          <input min="-180" max="180" step="10" type="range" class="form-range" value="20" id="ARM1" />
+
+          <label for="customRange1" class="form-label">Arm 2</label>
+          <input min="-180" max="180" step="10" type="range" class="form-range" value="-40" id="ARM2" />
+
+          <label for="customRange1" class="form-label">Arm 3</label>
+          <input min="-180" max="180" step="10" type="range" class="form-range" value="130" id="ARM3" />
+
+          <label for="customRange1" class="form-label">Arm 4</label>
+          <input min="-180" max="180" step="10" type="range" class="form-range" value="20" id="ARM4" />
+
+          <label for="customRange1" class="form-label">Arm 5</label>
+          <input min="-180" max="180" step="10" type="range" class="form-range" value="0" id="ARM5" />
+        </div>
+        <div class="d-flex flex-column mx-3 flex-fill">
+          <label for="customRange1" class="form-label">Base</label>
+        <input min="-180" max="180" step="10" type="range" class="form-range" value="30" id="BASE" />
+
+        <label for="customRange1" class="form-label">Claw 1</label>
+        <input min="-180" max="180" step="10" type="range" class="form-range" value="-10" id="CLAW1" />
+
+        <label for="customRange1" class="form-label">Claw 2</label>
+        <input min="-180" max="180" step="10" type="range" class="form-range" value="-10" id="CLAW2" />
+
+        <label for="customRange1" class="form-label">Claw 3</label>
+        <input min="-180" max="180" step="10" type="range" class="form-range" value="10" id="CLAW3" />
+        <label for="customRange1" class="form-label">Claw 4</label>
+        <input min="-180" max="180" step="10" type="range" class="form-range" value="10" id="CLAW4" />
+        </div>
+        </div>
+        
+      </div>
     </div>
-  </body>
-  <script id="vertex-shader" type="x-shader/x-vertex">
+  </div>
+  <!-- FOOTER -->
+<footer class="text-center py-4">
+	<div class="container p-4" id="footer-layout">
+		<h6>Worksheet 2 - Fasilkom UI</h6>
+		<p class="mb-0">Divany Harryndira - Syahrul Apriansyah</p>
+	</div>
+</footer>
+</body>
+<script id="vertex-shader" type="x-shader/x-vertex">
     #version 300 es
 
     in vec4 aPosition;
@@ -193,7 +130,7 @@
     }
   </script>
 
-  <script id="fragment-shader" type="x-shader/x-fragment">
+<script id="fragment-shader" type="x-shader/x-fragment">
     #version 300 es
 
     precision mediump float;
@@ -226,8 +163,9 @@
     }
   </script>
 
-  <script src="./Common/initShaders.js"></script>
-  <script src="./Common/MVnew.js"></script>
-  <script type="text/javascript" src="m4.js"></script>
-  <script src="pencapit.js"></script>
+<script src="./Common/initShaders.js"></script>
+<script src="./Common/MVnew.js"></script>
+<script type="text/javascript" src="m4.js"></script>
+<script src="pencapit.js"></script>
+
 </html>
