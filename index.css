@@ -1,0 +1,53 @@
+  html, body{
+    height: 100%;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  #page1{
+    background-color: #0E7987;
+    color: #D4FDE7;
+    min-height:87%;
+  }
+  #page1-layout{
+    padding-top: 1rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  h1{
+    font-family: 'Bungee Inline', cursive;
+  font-size:xx-large;
+  }
+#menu-panel{
+    justify-content: center;
+}
+  #objSelectBtnGrp{
+    max-width: fit-content;
+    background-color: #16A4A8;
+  }
+
+  #buttons01{
+    gap: 5px;
+  }
+  .btn.button{
+    border: 2px solid black;
+    border-radius: 5px;
+    border-color: #2CEACB;
+    color: #D4FDE7;
+  }
+.btn.button:hover{
+    background-color: #2CEACB;
+    color: #085A70;
+}
+  
+  footer{
+    background-color: #085A70;
+    color: #D4FDE7;
+  }
+  #footer-layout{
+    gap: 5px;
+    align-items: center;
+  }
+  
